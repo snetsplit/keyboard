@@ -25,6 +25,7 @@ KeyPad {
 
     content: c1
     symbols: "languages/Keyboard_symbols.qml"
+    navShiftKey.layout = "languages/Keyboard_nav.qml"
 
     Column {
         id: c1
