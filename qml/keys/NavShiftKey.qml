@@ -1,13 +1,14 @@
 import QtQuick 2.4
 import MaliitKeyboard 2.0
 
-import "../keys"
-
 ActionKey {
-    label: panel.state == "NAV" ? "ABC" : "NAV"
-    shifted: panel.state == "NAV" ? "ABC" : "NAV"
-    action: "symbols"
+    label: panel.state === "NAV" ? "ABC" : "NAV"
+    shifted: panel.state === "NAV" ? "ABC" : "NAV"
+    action: "navigation";
 
+    overridePressArea: true;
+
+    // Preserve previous keypad state
     property string __oldKeypadState: panel.activeKeypadState
 
     onPressed: {
@@ -17,11 +18,11 @@ ActionKey {
             __oldKeypadState = panel.activeKeypadState;
             panel.activeKeypadState = "NORMAL";
             panel.state = "NAV";
-            panel.symbols = "languages/Keyboard_nav.qml"
+            panel.symbols = "languages/Keyboard_nav.qml"  // your nav keyboard layout
         } else {
             panel.activeKeypadState = __oldKeypadState;
-            panel.state = "CHARACTERS"
-            panel.symbols = "languages/Keyboard_symbols.qml"
+            panel.state = "CHARACTERS";
+            panel.symbols = "languages/Keyboard_symbols.qml"  // revert to default
         }
     }
 }
