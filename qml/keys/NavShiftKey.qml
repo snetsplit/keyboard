@@ -1,9 +1,6 @@
-import QtQuick 2.0
-import MaliitKeyboard 2.0
-
 ActionKey {
     id: navKey
-    label: panel.state == "NAV" ? "ABC" : "NAV"
+    label: panel.state === "NAV" ? "ABC" : "NAV"
     action: "nav"
 
     property string __oldKeypadState: panel.activeKeypadState
@@ -13,8 +10,8 @@ ActionKey {
 
         if (panel.state === "CHARACTERS") {
             __oldKeypadState = panel.activeKeypadState
-            panel.activeKeypadState = "NAV"
-            panel.state = "NAV"
+            panel.activeKeypadState = "NAV"   // <- THIS must match your keypad file
+            panel.state = "NAV"               // <- unique state
         } else {
             panel.activeKeypadState = __oldKeypadState
             panel.state = "CHARACTERS"

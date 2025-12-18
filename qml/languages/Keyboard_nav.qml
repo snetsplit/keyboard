@@ -4,6 +4,7 @@ import keys 1.0
 
 KeyPad {
     id: navPad
+
     content: Column {
         spacing: 0
 
