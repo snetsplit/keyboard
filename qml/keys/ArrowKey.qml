@@ -30,6 +30,8 @@ ActionKey {
         }
     }
 
+    label: iconNormal
+
     MouseArea {
         id: pressArea
         anchors.fill: parent
