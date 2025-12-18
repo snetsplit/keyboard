@@ -64,7 +64,7 @@ KeyPad {
         }
 
         Row {
-            anchors.horizontalCenter: parent.horizontalCenter;
+            anchors.right: parent.right;
             spacing: 0
 
             CharKey { label: "Ctrl"; action: Qt.Key_Control;  leftSide: true; }
