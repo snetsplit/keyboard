@@ -10,6 +10,7 @@ ExtendedKeysSelector 1.0 ExtendedKeysSelector.qml
 LanguageKey 1.0 LanguageKey.qml
 OneTwoKey 1.0 OneTwoKey.qml
 ShiftKey 1.0 ShiftKey.qml
+NavShiftKey 1.0 SymbolShiftKey.qml
 SymbolShiftKey 1.0 SymbolShiftKey.qml
 CharKey 1.0 CharKey.qml
 KeyPad 1.0 KeyPad.qml
