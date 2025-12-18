@@ -25,7 +25,6 @@ KeyPad {
 
     content: c1
     symbols: "languages/Keyboard_symbols.qml"
-    navShiftKey.layout = "languages/Keyboard_nav.qml"
 
     Column {
         id: c1
@@ -85,7 +84,8 @@ KeyPad {
             height: panel.keyHeight + Device.row_margin;
 
             SymbolShiftKey { id: symShiftKey;                            anchors.left: parent.left; height: parent.height; }
-            NavShiftKey    { id: navShiftKey;                            anchors.left: symShiftKey.right; height: parent.height; }
+            NavShiftKey    { id: navShiftKey;                            anchors.left: symShiftKey.right; height: parent.height;
+    layout: "languages/Keyboard_nav.qml" }
             LanguageKey    { id: languageMenuButton;                     anchors.left: navShiftKey.right; height: parent.height; }
             CharKey        { id: commaKey;    label: ","; shifted: ","; extended: ["'", "\"", ";", ":", "@", "&", "(", ")"]; extendedShifted: ["'", "\"", ";", ":", "@", "&", "(", ")"]; anchors.left: languageMenuButton.right; height: parent.height; }
             SpaceKey       { id: spaceKey;                               anchors.left: commaKey.right; anchors.right: dotKey.left; noMagnifier: true; height: parent.height; }
