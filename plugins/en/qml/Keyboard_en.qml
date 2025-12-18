@@ -44,7 +44,8 @@ KeyPad {
             CharKey { label: "u"; shifted: "U"; extended: ["7", "û","ù","ú","ü"]; extendedShifted: ["7", "Û","Ù","Ú","Ü"] }
             CharKey { label: "i"; shifted: "I"; extended: ["8", "î","ï","ì","í"]; extendedShifted: ["8", "Î","Ï","Ì","Í"] }
             CharKey { label: "o"; shifted: "O"; extended: ["9", "ö","ô","ò","ó"]; extendedShifted: ["9", "Ö","Ô","Ò","Ó"] }
-            CharKey { label: "p"; shifted: "P"; extended: ["0"]; extendedShifted: ["0"]; rightSide: true; }
+            CharKey { label: "p"; shifted: "P"; extended: ["0"]; extendedShifted: ["0"]; }
+            CharKey { label: "pgup"; rightSide: true; }
         }
 
         Row {
@@ -60,7 +61,8 @@ KeyPad {
             CharKey { label: "h"; shifted: "H"; }
             CharKey { label: "j"; shifted: "J"; }
             CharKey { label: "k"; shifted: "K"; }
-            CharKey { label: "l"; shifted: "L"; rightSide: true; }
+            CharKey { label: "l"; shifted: "L"; }
+            CharKey { label: "pgdn"; rightSide: true; }
         }
 
         Row {
