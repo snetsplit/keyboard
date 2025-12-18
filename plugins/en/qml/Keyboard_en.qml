@@ -86,7 +86,7 @@ KeyPad {
 
             height: panel.keyHeight + Device.row_margin;
 
-            CharKey { id: ctrlKey label: "Crtl"; action: Qt.Key_Alt; anchors.left: parent.left; height: parent.height;  }
+            CharKey { id: ctrlKey; label: "Crtl"; action: Qt.Key_Alt; anchors.left: parent.left; height: parent.height;  }
             SymbolShiftKey { id: symShiftKey;                       anchors.left: ctrlKey.left; height: parent.height; }
             LanguageKey    { id: languageMenuButton;                anchors.left: symShiftKey.right; height: parent.height; }
             CharKey        { id: commaKey;          label: ","; shifted: ","; extended: ["'", "\"", ";", ":", "@", "&", "(", ")"]; extendedShifted: ["'", "\"", ";", ":", "@", "&", "(", ")"]; anchors.left: languageMenuButton.right; height: parent.height; }
