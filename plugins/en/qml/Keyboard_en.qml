@@ -45,7 +45,6 @@ KeyPad {
             CharKey { label: "i"; shifted: "I"; extended: ["8", "î","ï","ì","í"]; extendedShifted: ["8", "Î","Ï","Ì","Í"] }
             CharKey { label: "o"; shifted: "O"; extended: ["9", "ö","ô","ò","ó"]; extendedShifted: ["9", "Ö","Ô","Ò","Ó"] }
             CharKey { label: "p"; shifted: "P"; extended: ["0"]; extendedShifted: ["0"]; }
-            ActionKey { label: "pgup"; action: Qt.Key_PageUp; }
         }
 
         Row {
@@ -62,7 +61,6 @@ KeyPad {
             CharKey { label: "j"; shifted: "J"; }
             CharKey { label: "k"; shifted: "K"; }
             CharKey { label: "l"; shifted: "L"; }
-            ActionKey { label: "pgdn"; action: Qt.Key_PageDown; }
         }
 
         Row {

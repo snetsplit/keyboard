@@ -32,8 +32,8 @@ ActionKey {
     label: {
         switch (direction) {
             case "up": return "↑"
-            case "down": return "←"
-            case "left": return "↓"
+            case "down": return "↓"
+            case "left": return "←"
             case "right": return "→"
             default: return ""
         }
