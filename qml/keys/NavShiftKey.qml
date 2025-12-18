@@ -1,19 +1,17 @@
-import QtQuick 2.4
+import QtQuick 2.0
 import MaliitKeyboard 2.0
 
 ActionKey {
-    id: navShiftKey
+    id: navKey
     label: panel.state == "NAV" ? "ABC" : "NAV"
-    shifted: label
     action: "nav"
 
-    // Keep track of previous state
     property string __oldKeypadState: panel.activeKeypadState
 
     onPressed: {
-        Feedback.keyPressed();
+        Feedback.keyPressed()
 
-        if (panel.state == "CHARACTERS") {
+        if (panel.state === "CHARACTERS") {
             __oldKeypadState = panel.activeKeypadState
             panel.activeKeypadState = "NAV"
             panel.state = "NAV"
