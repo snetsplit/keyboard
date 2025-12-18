@@ -1,6 +1,8 @@
 import QtQuick 2.4
 import MaliitKeyboard 2.0
 
+import "../keys"
+
 ActionKey {
     label: panel.state == "NAV" ? "ABC" : "NAV"
     shifted: panel.state == "NAV" ? "ABC" : "NAV"

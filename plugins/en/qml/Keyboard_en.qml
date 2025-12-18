@@ -84,9 +84,8 @@ KeyPad {
             height: panel.keyHeight + Device.row_margin;
 
             SymbolShiftKey { id: symShiftKey;                            anchors.left: parent.left; height: parent.height; }
-            LanguageKey    { id: languageMenuButton;                     anchors.left: symShiftKey.right; height: parent.height; }
-            NavShiftKey { anchors.left: parent.left; height: parent.height }
-            NavShiftKey { anchors.left: languageMenuButton.left; height: parent.height; }
+            NavShiftKey { id: navShiftKey;                               anchors.left: symShiftKey.left; height: parent.height; }
+            LanguageKey    { id: languageMenuButton;                     anchors.left: navShiftKey.right; height: parent.height; }
             CharKey        { id: commaKey;    label: ","; shifted: ","; extended: ["'", "\"", ";", ":", "@", "&", "(", ")"]; extendedShifted: ["'", "\"", ";", ":", "@", "&", "(", ")"]; anchors.left: languageMenuButton.right; height: parent.height; }
             SpaceKey       { id: spaceKey;                               anchors.left: commaKey.right; anchors.right: dotKey.left; noMagnifier: true; height: parent.height; }
             CharKey        { id: dotKey;      label: "."; shifted: "."; extended: ["?", "-", "_", "!", "+", "%","#","/"];  extendedShifted: ["?", "-", "_", "!", "+", "%","#","/"]; anchors.right: enterKey.left; height: parent.height; }
