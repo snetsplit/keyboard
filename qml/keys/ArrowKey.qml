@@ -29,7 +29,15 @@ ActionKey {
         }
     }
 
-    label: iconNormal
+    label: {
+        switch (direction) {
+            case "up": return "↑"
+            case "down": return "←"
+            case "left": return "↓"
+            case "right": return "→"
+            default: return ""
+        }
+    }
 
     MouseArea {
         id: pressArea
