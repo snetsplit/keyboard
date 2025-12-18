@@ -77,7 +77,7 @@ KeyPad {
             CharKey { label: "n"; shifted: "N"; extended: ["ñ"]; extendedShifted: ["Ñ"] }
             CharKey { label: "m"; shifted: "M"; }
             ArrowKey { direction: "up";}
-            BackspaceKey {}
+            BackspaceKey { rightSide: true;}
         }
 
         Item {
