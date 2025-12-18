@@ -97,7 +97,7 @@ KeyPad {
             ReturnKey      { id: enterKey;                               anchors.right: leftArrowKey.left; height: parent.height; }
             Key            { id: leftArrowKey;  label: "←"; key: Qt.Key_Left; anchors.right: downArrowKey.left; height: parent.height; }
             Key            { id: downArrowKey;  label: "↓"; key: Qt.Key_Down; anchors.right: rightArrowKey.left; height: parent.height; }
-            Key            { id: rightArrowKey; label: "→"; key: Qt.Key_Right anchors.right: parent.right; height: parent.height; }
+            Key            { id: rightArrowKey; label: "→"; key: Qt.Key_Right; anchors.right: parent.right; height: parent.height; }
         }
     } // column
 }
