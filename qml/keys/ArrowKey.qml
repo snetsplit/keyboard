@@ -16,7 +16,6 @@ ActionKey {
     property string direction: "right" // "left", "up", "down", "right"
     property int moveAmount: 10         // pixels to move the cursor
 
-    label: ""
     width: panel.keyWidth + Device.actionKeyPadding
     overridePressArea: true
 
