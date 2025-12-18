@@ -31,35 +31,31 @@ ActionKey {
     }
 
     MouseArea {
+        id: pressArea
         anchors.fill: parent
 
         onPressed: {
             Feedback.keyPressed()
+            currentlyPressed = true
+
+            // simulate key press
+            if (shifted || panel.activeKeypadState === "CAPSLOCK") {
+                event_handler.onKeyPressed("", "shift-" + direction)
+            } else {
+                event_handler.onKeyPressed("", direction)
+            }
         }
 
         onReleased: {
-            // Activate cursor swipe
-            fullScreenItem.cursorSwipe = true
+            currentlyPressed = false
 
-            // Determine if Shift is pressed for text selection
-            var selecting = fullScreenItem.shiftPressed || fullScreenItem.capsLock
-
-            switch (arrowKey.direction) {
-                case "up":
-                    fullScreenItem.processSwipe(0, -arrowKey.moveAmount, selecting)
-                    break
-                case "down":
-                    fullScreenItem.processSwipe(0, arrowKey.moveAmount, selecting)
-                    break
-                case "left":
-                    fullScreenItem.processSwipe(-arrowKey.moveAmount, 0, selecting)
-                    break
-                case "right":
-                    fullScreenItem.processSwipe(arrowKey.moveAmount, 0, selecting)
-                    break
+            if (shifted || panel.activeKeypadState === "CAPSLOCK") {
+                event_handler.onKeyReleased("", "shift-" + direction)
+                keySent("")
+            } else {
+                event_handler.onKeyReleased("", direction)
+                keySent("")
             }
-
-            fullScreenItem.cursorSwipe = false
         }
     }
 }
