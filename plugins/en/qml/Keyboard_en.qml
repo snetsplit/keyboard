@@ -78,7 +78,7 @@ KeyPad {
             CharKey { label: "b"; shifted: "B"; }
             CharKey { label: "n"; shifted: "N"; extended: ["ñ"]; extendedShifted: ["Ñ"] }
             CharKey { label: "m"; shifted: "M"; }
-            Key { label: "↑" key: Qt.Key_Left; }
+            Key { label: "↑"; key: Qt.Key_Left; }
             BackspaceKey {}
         }
 
