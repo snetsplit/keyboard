@@ -18,11 +18,11 @@ ActionKey {
             __oldKeypadState = panel.activeKeypadState;
             panel.activeKeypadState = "NORMAL";
             panel.state = "NAV";
-            panel.symbols = "languages/Keyboard_nav.qml"  // your nav keyboard layout
+            panel.navigation = "languages/Keyboard_nav.qml"  // your nav keyboard layout
         } else {
             panel.activeKeypadState = __oldKeypadState;
             panel.state = "CHARACTERS";
-            panel.symbols = "languages/Keyboard_symbols.qml"  // revert to default
+            panel.navigation = "languages/Keyboard_symbols.qml"  // revert to default
         }
     }
 }
