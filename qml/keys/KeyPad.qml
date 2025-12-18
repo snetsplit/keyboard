@@ -23,6 +23,7 @@ Item {
 
     property var content: c1
     property string symbols: "languages/Keyboard_symbols.qml"
+    property string nav: "languages/Keyboard_nav.qml"
     property bool capsLock: false
 
     Column {
