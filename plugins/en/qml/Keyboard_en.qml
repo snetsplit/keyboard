@@ -78,7 +78,7 @@ KeyPad {
             CharKey { label: "b"; shifted: "B"; }
             CharKey { label: "n"; shifted: "N"; extended: ["ñ"]; extendedShifted: ["Ñ"] }
             CharKey { label: "m"; shifted: "M"; }
-            ActionKey { label: "↑"; action: Qt.Key_Up; }
+            ArrowKey { direction: "up";}
             BackspaceKey {}
         }
 
@@ -88,16 +88,16 @@ KeyPad {
 
             height: panel.keyHeight + Device.row_margin;
 
-            SymbolShiftKey { id: symShiftKey;                            anchors.left: parent.left; height: parent.height; }
-            NavShiftKey    { id: navShiftKey;                            anchors.left: symShiftKey.right; height: parent.height; }
-            LanguageKey    { id: languageMenuButton;                     anchors.left: navShiftKey.right; height: parent.height; }
+            SymbolShiftKey { id: symShiftKey;                       anchors.left: parent.left; height: parent.height; }
+            NavShiftKey    { id: navShiftKey;                       anchors.left: symShiftKey.right; height: parent.height; }
+            LanguageKey    { id: languageMenuButton;                anchors.left: navShiftKey.right; height: parent.height; }
             CharKey        { id: commaKey;          label: ","; shifted: ","; extended: ["'", "\"", ";", ":", "@", "&", "(", ")"]; extendedShifted: ["'", "\"", ";", ":", "@", "&", "(", ")"]; anchors.left: languageMenuButton.right; height: parent.height; }
-            SpaceKey       { id: spaceKey;                               anchors.left: commaKey.right; anchors.right: dotKey.left; noMagnifier: true; height: parent.height; }
+            SpaceKey       { id: spaceKey;                          anchors.left: commaKey.right; anchors.right: dotKey.left; noMagnifier: true; height: parent.height; }
             CharKey        { id: dotKey;            label: "."; shifted: "."; extended: ["?", "-", "_", "!", "+", "%","#","/"];  extendedShifted: ["?", "-", "_", "!", "+", "%","#","/"]; anchors.right: enterKey.left; height: parent.height; }
-            ReturnKey      { id: enterKey;                               anchors.right: leftArrowKey.left; height: parent.height; }
-            ActionKey      { id: leftArrowKey;  label: "←"; action: Qt.Key_Left; anchors.right: downArrowKey.left; height: parent.height; }
-            ActionKey      { id: downArrowKey;  label: "↓"; action: Qt.Key_Down; anchors.right: rightArrowKey.left; height: parent.height; }
-            ArrowKey  { id: rightArrowKey; direction: "right"; anchors.right: parent.right; height: parent.height; }
+            ReturnKey      { id: enterKey;                          anchors.right: leftArrowKey.left; height: parent.height; }
+            ArrowKey       { id: leftArrowKey;  direction: "left";    anchors.right: downArrowKey.left; height: parent.height; }
+            ArrowKey       { id: downArrowKey;  direction: "down";  anchors.right: rightArrowKey.left; height: parent.height; }
+            ArrowKey       { id: rightArrowKey; direction: "right"; anchors.right: parent.right; height: parent.height; }
         }
     } // column
 }
