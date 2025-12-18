@@ -52,7 +52,7 @@ KeyPad {
             anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
-            CharKey { label: "Alt"; leftSide: true;}
+            CharKey { label: "Alt"; action: Qt.Key_Alt; leftSide: true }
             CharKey { label: "a"; shifted: "A"; extended: ["ä","à","â","ª","á","å", "æ"]; extendedShifted: ["Ä","À","Â","ª","Á","Å","Æ"]; }
             CharKey { label: "s"; shifted: "S"; extended: ["ß","$"]; extendedShifted: ["$"] }
             CharKey { label: "d"; shifted: "D"; extended: ["ð"]; extendedShifted: ["Ð"] }
@@ -69,7 +69,7 @@ KeyPad {
             anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
-            CharKey { label: "Ctrl"; }
+            CharKey { label: "Ctrl"; action: Qt.Key_Control; leftSide: true;}
             ShiftKey {}
             CharKey { label: "z"; shifted: "Z"; }
             CharKey { label: "x"; shifted: "X"; }
@@ -78,7 +78,7 @@ KeyPad {
             CharKey { label: "b"; shifted: "B"; }
             CharKey { label: "n"; shifted: "N"; extended: ["ñ"]; extendedShifted: ["Ñ"] }
             CharKey { label: "m"; shifted: "M"; }
-            ActionKey { label: "↑"; action: Qt.Key_Up; }
+            ActionKey { label: "↑"; action: Qt.Key_Up;  rightSide: true; }
             BackspaceKey {}
         }
 
