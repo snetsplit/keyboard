@@ -32,8 +32,7 @@ KeyPad {
         spacing: 0
 
         Row {
-            anchors.left: parent.left
-            anchors.right: parent.right
+            anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
             CharKey { label: "Alt"; action: Qt.Key_Alt; leftSide: true }
@@ -50,8 +49,7 @@ KeyPad {
         }
 
         Row {
-            anchors.left: parent.left
-            anchors.right: parent.right
+            anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
             CharKey { label: "a"; shifted: "A"; extended: ["ä","à","â","ª","á","å", "æ"]; extendedShifted: ["Ä","À","Â","ª","Á","Å","Æ"]; }
@@ -70,7 +68,7 @@ KeyPad {
             anchors.right: parent.right
             spacing: 0
 
-            CharKey { label: "Ctrl"; action: Qt.Key_Control;  leftSide: true; }
+            CharKey { label: "Ctrl"; action: Qt.Key_Control; }
             ShiftKey {}
             CharKey { label: "z"; shifted: "Z"; }
             CharKey { label: "x"; shifted: "X"; }
