@@ -61,7 +61,7 @@ KeyPad {
             CharKey { label: "j"; shifted: "J"; }
             CharKey { label: "k"; shifted: "K"; }
             CharKey { label: "l"; shifted: "L"; }
-            CharKey { label: "Alt"; action: Qt.Key_Alt; }
+            AltKey { }
         }
 
         Row {
@@ -77,7 +77,7 @@ KeyPad {
             CharKey { label: "n"; shifted: "N"; extended: ["ñ"]; extendedShifted: ["Ñ"] }
             CharKey { label: "m"; shifted: "M"; }
             ArrowKey { direction: "up";}
-            CharKey { id: ctrlKey; label: "Crtl"; action: Qt.Key_Control; }
+            CtrlKey { }
         }
 
         Item {
