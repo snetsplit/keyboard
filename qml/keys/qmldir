@@ -20,4 +20,5 @@ SpaceKey 1.0 SpaceKey.qml
 UrlKey 1.0 UrlKey.qml
 CategoryKey 1.0 CategoryKey.qml
 ArrowKey 1.0 ArrowKey.qml
+CtrlKey 1.0 CtrlKey.qml
 AltKey 1.0 AltKey.qml
