@@ -65,7 +65,6 @@ KeyPad {
         }
 
         Row {
-            anchors.left: parent.left
             anchors.right: parent.right
             spacing: 0
 
