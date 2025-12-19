@@ -17,6 +17,8 @@ ActionKey {
     property int moveAmount: 10         // pixels to move the cursor
 
     overridePressArea: true
+    property int padding: Device.actionKeyPadding
+    width: panel.keyWidth + padding
 
     iconNormal: {
         switch (direction) {
@@ -27,6 +29,8 @@ ActionKey {
             default: return ""
         }
     }
+    iconShifted: iconNormal;
+    iconCapsLock: iconNormal;
 
     label: {
         switch (direction) {
@@ -37,6 +41,7 @@ ActionKey {
             default: return ""
         }
     }
+
 
     MouseArea {
         id: pressArea
