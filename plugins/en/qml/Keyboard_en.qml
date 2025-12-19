@@ -52,7 +52,6 @@ KeyPad {
             anchors.horizontalCenter: parent.horizontalCenter;
             spacing: 0
 
-            CharKey { label: "Alt"; action: Qt.Key_Control; }
             CharKey { label: "a"; shifted: "A"; extended: ["ä","à","â","ª","á","å", "æ"]; extendedShifted: ["Ä","À","Â","ª","Á","Å","Æ"]; }
             CharKey { label: "s"; shifted: "S"; extended: ["ß","$"]; extendedShifted: ["$"] }
             CharKey { label: "d"; shifted: "D"; extended: ["ð"]; extendedShifted: ["Ð"] }
@@ -62,6 +61,7 @@ KeyPad {
             CharKey { label: "j"; shifted: "J"; }
             CharKey { label: "k"; shifted: "K"; }
             CharKey { label: "l"; shifted: "L"; }
+            CharKey { label: "Alt"; action: Qt.Key_Alt; }
         }
 
         Row {
@@ -78,7 +78,7 @@ KeyPad {
             CharKey { label: "n"; shifted: "N"; extended: ["ñ"]; extendedShifted: ["Ñ"] }
             CharKey { label: "m"; shifted: "M"; }
             ArrowKey { direction: "up";}
-            CharKey { id: ctrlKey; label: "Crtl"; action: Qt.Key_Alt; }
+            CharKey { id: ctrlKey; label: "Crtl"; action: Qt.Key_Control;  anchors.right: parent.right; }
         }
 
         Item {
