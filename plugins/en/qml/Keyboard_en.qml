@@ -60,6 +60,7 @@ KeyPad {
             CharKey { label: "j"; shifted: "J"; }
             CharKey { label: "k"; shifted: "K"; }
             CharKey { label: "l"; shifted: "L"; }
+            BackspaceKey { }
         }
 
         Row {
@@ -67,7 +68,6 @@ KeyPad {
             anchors.right: parent.right
             spacing: 0
 
-            CharKey { label: "Alt"; action: Qt.Key_Control; }
             ShiftKey {}
             CharKey { label: "z"; shifted: "Z"; }
             CharKey { label: "x"; shifted: "X"; }
@@ -77,7 +77,7 @@ KeyPad {
             CharKey { label: "n"; shifted: "N"; extended: ["ñ"]; extendedShifted: ["Ñ"] }
             CharKey { label: "m"; shifted: "M"; }
             ArrowKey { direction: "up";}
-            BackspaceKey { rightSide: true;}
+            CharKey { label: "Alt"; action: Qt.Key_Control; }
         }
 
         Item {
