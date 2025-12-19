@@ -69,6 +69,7 @@ KeyPad {
             anchors.right: parent.right
             spacing: 0
 
+            ShiftKey {}
             CharKey { label: "z"; shifted: "Z"; }
             CharKey { label: "x"; shifted: "X"; }
             CharKey { label: "c"; shifted: "C"; extended: ["ç"]; extendedShifted: ["Ç"] }
@@ -77,7 +78,7 @@ KeyPad {
             CharKey { label: "n"; shifted: "N"; extended: ["ñ"]; extendedShifted: ["Ñ"] }
             CharKey { label: "m"; shifted: "M"; }
             ArrowKey { direction: "up";}
-            ShiftKey {}
+            CharKey { id: ctrlKey; label: "Crtl"; action: Qt.Key_Alt; anchors.left: parent.left; height: parent.height; }
         }
 
         Item {
@@ -85,9 +86,7 @@ KeyPad {
             anchors.right: parent.right
 
             height: panel.keyHeight + Device.row_margin;
-
-            CharKey { id: ctrlKey; label: "Crtl"; action: Qt.Key_Alt; anchors.left: parent.left; height: parent.height;  }
-            SymbolShiftKey { id: symShiftKey;                       anchors.left: ctrlKey.right; height: parent.height; }
+            SymbolShiftKey { id: symShiftKey;                       anchors.left: parent.left; height: parent.height; }
             LanguageKey    { id: languageMenuButton;                anchors.left: symShiftKey.right; height: parent.height; }
             CharKey        { id: commaKey;          label: ","; shifted: ","; extended: ["'", "\"", ";", ":", "@", "&", "(", ")"]; extendedShifted: ["'", "\"", ";", ":", "@", "&", "(", ")"]; anchors.left: languageMenuButton.right; height: parent.height; }
             SpaceKey       { id: spaceKey;                          anchors.left: commaKey.right; anchors.right: dotKey.left; noMagnifier: true; height: parent.height; }
